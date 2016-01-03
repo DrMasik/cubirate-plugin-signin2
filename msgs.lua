@@ -3,8 +3,8 @@
 --
 --------------------------------------------------------------------------------
 
-msgLoginSuccess = "Welcome";
-msgPlayerCreateError = "Error on cerate new player. Try again";
-msgRelogin = "Relogon, please";
-msgWrongPasswordOrLogin = "Wrong login or password";
+msgLoginSuccess = "Вы успешно авторизировались";
+msgPlayerCreateError = "Ошибка создания нового игрока. Попробуйте еще раз";
+msgRelogin = "Перезайдите, пожалуйста";
+msgWrongPasswordOrLogin = "Логин или пароль неверный";
 
