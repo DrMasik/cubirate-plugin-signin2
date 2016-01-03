@@ -38,20 +38,11 @@ function OnPlayerMoving(aPlayer, aOldPosition, aNewPosition)
   -- Convert player current position
   plPosition = gPlayers[plUID]:getSpawnPosition();
 
-  -- Is it player on ground?
-  -- if aPlayer:IsOnGround() == false then
-  -- if aPlayer:IsFlying() == true then
-  --   aPlayer:SendMessage("Player is in air");
-  --   -- TP player to highest block
-  --   chunkLoaded, posY = worldObj:TryGetHeight(plPosition.x, plPosition.z);
-
-  --   -- If chunk loaded - move player to ground
-  --   if chunkLoaded == true then
-  --     aPlayer:TeleportToCoords(plPosition.x, posY, plPosition.z);
-  --     gPlayers[plUID]:setSpawnPosition(Vector3i(plPosition.x, posY, plPosition.z));
-  --     return false;
-  --   end
-  -- end
+  -- Check is it plugin reloaded?
+  if plPosition.x == nil then
+    aPlayer:GetClientHandle():Kick(msgRelogin);
+    return false;
+  end
 
   -- Allow player no move into some distance
   if math.abs(plPosition.x - aNewPosition.x) < delta and math.abs(plPosition.z - aNewPosition.z) < delta then
@@ -59,7 +50,6 @@ function OnPlayerMoving(aPlayer, aOldPosition, aNewPosition)
   end
 
   -- Back player to spawn position
-  -- gPlayers[plUID]:getSpawnPosition();
   aPlayer:TeleportToCoords(plPosition.x, plPosition.y, plPosition.z);
 
   -- Disable moving
