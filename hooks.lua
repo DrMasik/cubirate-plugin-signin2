@@ -4,7 +4,7 @@ function hooks()
   cPluginManager:AddHook(cPluginManager.HOOK_EXECUTE_COMMAND,    OnExecuteCommand)
   cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_SPAWNED,     OnPlayerSpawned);
   cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_DESTROYED,   OnPlayerDestroyed);
-  -- cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_MOVING,      OnPlayerMoving);  -- TODO
+  cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_MOVING,      OnPlayerMoving);  -- TODO
   cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_LEFT_CLICK,  OnPlayerLeftClick);
   cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_BREAKING_BLOCK, OnPlayerBreakingBlock);
   cPluginManager:AddHook(cPluginManager.HOOK_PLAYER_RIGHT_CLICK, OnPlayerRightClick);
