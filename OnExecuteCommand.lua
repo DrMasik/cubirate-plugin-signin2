@@ -12,7 +12,7 @@ function OnExecuteCommand(aPlayer, aCommand)
   local plUID = aPlayer:GetUniqueID();
   local plName = aPlayer:GetName();
   local plCommand = aCommand[1]:lower();
-  local commands = {'/login', '/l', '/log', '/reg', '/sign', '/s', '/signin'};
+  local commands = {'/login', '/l', '/log', '/register', '/reg', '/sign', '/s', '/signin'};
   local commandID = 1;
 
   -- is it player into not exists

@@ -12,7 +12,7 @@ g_PluginInfo = {
 
   Commands = {
     ['/login'] = {
-      Alias = {'/l', '/log', '/reg', '/sign', '/s', '/signin'},
+      Alias = {'/l', '/log', '/register', '/reg', '/sign', '/s', '/signin'},
       Permission = "signin2.core",
       HelpString = "Login",
       Handler = commandGUILogin,
