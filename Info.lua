@@ -16,7 +16,13 @@ g_PluginInfo = {
       Permission = "signin2.core",
       HelpString = "Login",
       Handler = commandGUILogin,
-    },  -- /signedit
+    },  -- /login
+
+    ['/passwd'] = {
+      Permission = 'signin2.core',
+      HelpString = 'Change password',
+      Handler = commandGUIPasswd,
+    },
   },  -- Commands
 
 --------------------------------------------------------------------------------
