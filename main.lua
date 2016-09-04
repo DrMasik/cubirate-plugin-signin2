@@ -36,6 +36,12 @@ function Initialize(Plugin)
   -- Create DB class
   gStore = cStore:new(pluginDir, 'logins.sqlite3');
 
+  -- Create DB
+  if gStore:createDB() ~= true then
+    console_log('Can not create DB');
+    return false;
+  end
+
   -- Nice message :)
   console_log(gPluginName ..": Initialized " .. gPluginName .. " v." .. Plugin:GetVersion())
 
