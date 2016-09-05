@@ -1,7 +1,7 @@
 g_PluginInfo = {
   Name = "Signin2",
-  Version = "20160102",
-  Date = "2016-01-02",
+  Version = "2016090502",
+  Date = "2016-09-05-02",
   Description = [=[ Signin2 ]=],
 
   ConsoleCommands =
@@ -22,6 +22,12 @@ g_PluginInfo = {
       Permission = 'signin2.core',
       HelpString = 'Change password',
       Handler = commandGUIPasswd,
+    },
+
+    ['/chpasswd'] = {
+      Permission = 'signin2.chpasswd',
+      HelpString = 'Change password for other player',
+      Handler = commandGUIChpasswd,
     },
   },  -- Commands
 

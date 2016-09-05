@@ -12,7 +12,7 @@ gPluginName = '';
 
 function Initialize(Plugin)
   Plugin:SetName("Signin2")
-  Plugin:SetVersion(2016090501)
+  Plugin:SetVersion(2016090502)
 
   gPluginName = Plugin:GetName();
 
