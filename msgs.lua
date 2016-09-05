@@ -7,4 +7,4 @@ msgLoginSuccess = "Вы успешно авторизировались";
 msgPlayerCreateError = "Ошибка создания нового игрока. Попробуйте еще раз";
 msgRelogin = "Перезайдите, пожалуйста";
 msgWrongPasswordOrLogin = "Логин или пароль неверный";
-
+msgAuthenticatePlease = "Авторизируйтесь, пожалуйста"

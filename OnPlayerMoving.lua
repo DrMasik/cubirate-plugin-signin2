@@ -16,6 +16,7 @@ function OnPlayerMoving(aPlayer, aOldPosition, aNewPosition)
   local posY = 0;
   local delta = 3; -- Delta blocks to move without authentication
   local worldObj;
+  local messageTimeDelay = 3;
 
   local plUID = aPlayer:GetUniqueID();
 
@@ -42,6 +43,12 @@ function OnPlayerMoving(aPlayer, aOldPosition, aNewPosition)
   if plPosition.x == nil then
     aPlayer:GetClientHandle():Kick(msgRelogin);
     return false;
+  end
+
+  -- Show massage to player
+  if os.time() - gPlayers[plUID]:getLastMsgToPlayerTime() > messageTimeDelay then
+    aPlayer:SendMessageInfo(msgAuthenticatePlease);
+    gPlayers[plUID]:setLastMsgToPlayerTime(os.time())
   end
 
   -- Allow player no move into some distance
