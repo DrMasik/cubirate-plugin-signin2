@@ -7,7 +7,7 @@ function OnPlayerSpawned(aPlayer)
   func_name = "OnPlayerSpawned()";
 
   if not aPlayer then
-    return fasle;
+    return false;
   end
 
   local plUID = aPlayer:GetUniqueID();
